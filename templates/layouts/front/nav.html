@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container row">
+            <div class="col-4 align-self-center">
+              <a class="navbar-brand site-logo-text" href="{% url 'pages:home'  %}">Krishi Bondhu</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="col-8 align-self-center justify-content-end">
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'pages:home'  %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:about'  %}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:contact'  %}">Contact</a>
+                  </li>
+                  {% if request.user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pages:logout'  %}">Logout</a>
+                  </li> 
+                  {% else %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      User
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{% url 'pages:login' %}">Login</a></li>
+                      <li><a class="dropdown-item" href="{% url 'pages:signup' %}">Sign Up</a></li>
+                    </ul>
+                  </li>
+                  
+                  {%endif%}
+                  
+                 
+                </ul>
+                
+              </div>
+            </div>
+    
+        </div>
+      </nav>

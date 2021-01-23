@@ -1,0 +1,23 @@
+{% extends '../layouts/front/base.html' %}
+{% load bootstrap %}
+{% block content %}
+<div class="row">
+  {% if messages %}
+  <ul class="messages">
+      {% for message in messages %}
+      <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+      {% endfor %}
+  </ul>
+{% endif %}
+  <div class="col-4 offset-md-4">
+    <form action="" method="post">
+      {% csrf_token %}
+      
+      {{ form|bootstrap }}
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}

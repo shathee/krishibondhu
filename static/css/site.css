@@ -1,0 +1,81 @@
+/*font-family: 'Hind Siliguri', sans-serif;
+font-family: 'Yusei Magic', sans-serif;*/
+body{
+	background-color: #BCD3E7;
+}
+header{
+	background-color: #BCD3E7;
+}
+.site-roof{
+	background-color: #001233;
+	height: 20px;
+	
+}
+.site-logo-text{
+	font-family: 'Potta One', cursive;
+	color: #ffccff !important;
+}
+.site-logo-text:hover{
+	color: #fff166 !important;
+}
+.site-header-nav{
+	font-family: 'Yusei Magic', sans-serif;
+	font-size: 1.1rem;
+	background-color: #001845;
+	background-image: linear-gradient(#001233, #001845);
+	padding-bottom: 10px;
+}	
+.site-header-nav ul li a{
+	color: #f2ccff !important;
+}
+.site-header-nav ul li a:hover{
+	color: #ffff66 !important;
+}
+.site-header-nav ul li{
+	padding: 5px;
+}
+.site-header-nav ul li:hover{
+	background-color: #002855;
+}
+
+.dropdown-menu {
+	background-color: #254760;
+}
+.dropdown-item:hover {
+	background-color: inherit;
+	color:#ffd166;
+}
+ul.dropdown-menu > li:hover {
+	background-color: none;
+}
+.dropdown-item li a:hover {
+	background-color: inherit;
+}
+.content{
+	background-color: #fefefe;
+	color: #25476D;
+	min-height: 80vh;
+	padding-top: 15px;
+}
+
+
+.carousel-item img{
+	height: 350px;
+}
+
+.footer{
+	background-color: #151612;
+	height: auto;
+	background-image: linear-gradient( #001845, #001233);
+}
+
+.content .card{
+	background-color: inherit;
+	text-align: justify;
+	padding: 10px;
+}
+
+.footer .card{
+	background-color: inherit;
+	color: #d8f3dc;
+}
