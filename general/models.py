@@ -15,7 +15,10 @@ class District(models.Model):
 	division = models.ForeignKey(Division, on_delete=models.CASCADE)
 	name = models.CharField(max_length=15, blank=False, null=False)
 	bn_name = models.CharField(max_length=15, blank=True, null=True)
-	metropolitan = models.CharField(max_length=1, choices=[('Y', 'Yes'), ('N', 'No')], default='N')
+	lat = models.TextField(max_length=50, blank=True, null=True)
+	lon = models.TextField(max_length=50, blank=True, null=True)
+	website = models.URLField( blank=True, null=True)
+	metropolitan = models.CharField(max_length=1, choices=[('Y', 'Yes'), ('N', 'No')], default='N', blank=True, null=True)
 	
 	def __str__(self):
 		return '{}'.format(self.name)

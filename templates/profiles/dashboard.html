@@ -8,7 +8,8 @@
       </div>
       <div class="card-body">
         {% if request.user.is_authenticated %}
-        <h3>Congratulations!! You are now logged In dear {{request.user.username}} </h3>
+         
+        <h3>Congratulations!! You are now logged In as {{ request.user.profile.get_profile_type_display }}  dear {{request.user.username}} </h3>
         {% else %}
         <h3>You Are Not logged in. Access Denied</h3>
         {%endif%}
