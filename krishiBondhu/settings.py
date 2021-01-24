@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #custom created
     'profiles',
     'pages',
+    'general',
     'bootstrapform',
     
 ]

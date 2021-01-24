@@ -7,11 +7,13 @@ class Profile(models.Model):
 	# inlines = [ UserInline, ]
 
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	# first_name = models.CharField(max_length=50, blank=False, null=False)
-	# last_name = models.CharField(max_length=50, blank=True, null=True)
+	mobile = models.CharField(max_length=15, blank=True, null=True)
+	gender = models.CharField(max_length=2, choices=[('M', 'Male'), ('F', 'Female')], default='M')
 	profile_type = models.CharField(max_length=1,choices=[('F','Farmer'), ('A','Advisor')], default='F',)
 
 
 	def __str__(self):
-		return 'Profile: {}'.format(self.user)
+		return '{}'.format(self.user)
+
+
 
