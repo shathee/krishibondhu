@@ -30,7 +30,7 @@ class ProfileForm(forms.ModelForm):
         
     class Meta:
         model = Profile
-        fields = ('gender', 'profile_type', 'mobile')
+        fields = ('gender', 'profile_type', 'mobile', 'district')
         widgets = {
             "gender": forms.Select(
                 attrs={
@@ -43,6 +43,11 @@ class ProfileForm(forms.ModelForm):
                 }
             ),
             "mobile": forms.TextInput(
+                attrs={
+                    "class": "form-control"
+                }
+            ),
+            "district": forms.Select(
                 attrs={
                     "class": "form-control"
                 }

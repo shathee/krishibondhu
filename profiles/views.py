@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.utils.translation import gettext as _
+from django.db import transaction
+
 
 
 from .forms import UserForm, ProfileForm
+from .models import Profile
 
 # Create your views here.
 
@@ -16,8 +20,9 @@ def dashboard(request):
     else:
         return HttpResponseRedirect(reverse_lazy('pages:login'))
 
-# @login_required
-# @transaction.atomic
+
+@login_required
+@transaction.atomic
 def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
@@ -32,7 +37,11 @@ def update_profile(request):
     else:
         user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
-    return render(request, 'profiles/profile.html', {
+    user = Profile.objects.get(user_id = request.user.id)
+    # print(user.district.division)
+    context = {
+        'user_data': user,
         'user_form': user_form,
         'profile_form': profile_form
-    })
+    }
+    return render(request, 'profiles/profile.html', context)
