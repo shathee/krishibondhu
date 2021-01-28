@@ -7,6 +7,8 @@ from django.db import models
 class Division(models.Model):
 	name = models.CharField(max_length=15, blank=False, null=False)
 	bn_name = models.CharField(max_length=15, blank=True, null=True)
+	website = models.URLField( blank=True, null=True)
+	
 	def __str__(self):
 		return '{}'.format(self.name)
 
@@ -27,6 +29,8 @@ class Upazila(models.Model):
 	district = models.ForeignKey(District, on_delete=models.CASCADE, default='1')
 	name = models.CharField(max_length=15, blank=False, null=False)
 	bn_name = models.CharField(max_length=15, blank=True, null=True)
+	website = models.URLField( blank=True, null=True)
+
 	def __str__(self):
 		return '{}'.format(self.name)
 
