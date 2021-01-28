@@ -79,3 +79,17 @@ ul.dropdown-menu > li:hover {
 	background-color: inherit;
 	color: #d8f3dc;
 }
+
+
+
+
+.messages .success {
+	background-color: #004346;
+	color: #fefefe;
+	text-align: center;
+}
+.messages .info {
+	background-color: #fec5bb;
+	color: #000000;
+	text-align: center;
+}

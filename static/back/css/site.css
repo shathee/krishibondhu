@@ -1,3 +1,11 @@
 .sidebar .logo .simple-text{
     font-family: 'Potta One';
 }
+
+
+.messages .success {
+	color: #0f9f48;
+}
+.messages .info {
+	color: #fec5bb;
+}

@@ -4,10 +4,15 @@
 
       Tip 2: you can also add an image using data-image tag
   -->
-    <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+    <div class="logo"><a href="{% url 'profiles:dashboard' %}" class="simple-text logo-normal">
         Krishi Bondhu
       </a></div>
     <div class="sidebar-wrapper">
+    {% if request.user.profile.profile_type == none %}
+      
+    {% else %}
+      
+    
       <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="{% url 'profiles:dashboard' %}">
@@ -65,5 +70,6 @@
           </a>
         </li> -->
       </ul>
+      {% endif %}
     </div>
   </div>

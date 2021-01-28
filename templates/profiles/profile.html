@@ -22,6 +22,10 @@
           {{ field }}
         </div>
         {% endfor %}
+        <div class="form-group">
+             <span>Division: {{user_data.district.division}}</span>
+             <span>Upazila: {{user_data.district.upazila}}</span>
+        </div>
         <button type="submit">Save changes</button>
       </form>
   </div>

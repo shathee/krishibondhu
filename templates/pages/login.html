@@ -2,13 +2,20 @@
 {% load bootstrap %}
 {% block content %}
 <div class="row">
-  {% if messages %}
-  <ul class="messages">
-      {% for message in messages %}
-      <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
-      {% endfor %}
-  </ul>
-{% endif %}
+  
+  <div class="col-8 offset-md-2">
+    {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          <p{% if message.tags %} class="{{ message.extra_tags }}"{% endif %}>{{ message }}</p>
+          {% endfor %}
+      </ul>
+    {% endif %}
+   
+  </div>
+</div>
+<div class="row">
+  
   <div class="col-4 offset-md-4">
     <form action="" method="post">
       {% csrf_token %}

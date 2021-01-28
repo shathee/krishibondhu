@@ -23,12 +23,14 @@
 <body class="">
   <div class="wrapper ">
     {% include './sidebar.html' %}
+  
     <div class="main-panel">
       <!-- Navbar -->
       {% include './main_nav.html' %}
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
+         
           {% block content %}
           {% endblock %}
           

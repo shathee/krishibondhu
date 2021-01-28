@@ -20,12 +20,14 @@ from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from pages import urls as pages_urls
 from profiles import urls as profiles_urls
+from general import urls as general_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(pages_urls)),
     path('', include(profiles_urls)),
+    path('', include(general_urls)),
     
 ]
 

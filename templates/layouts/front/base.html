@@ -19,7 +19,7 @@
       {% load i18n %}
     <div class="container site-roof">
       <div class="row justify-content-end">
-        <div class="col-4">
+        <div class="col-4 justify-content-end">
           <!-- <ul class="list-inline">
             <li class="list-inline-item">About Us</li>
             <li class="list-inline-item">Contat</li>
@@ -29,6 +29,11 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form> -->
+
+          <ul class="list-inline align-self-end d-flex align-items-end">
+            <li class="list-inline-item"><a href="{% url 'pages:login' %}">Login</a></li>
+            <li class="list-inline-item"><a href="{% url 'pages:signup' %}">Register as Farmer | Advisor</a></li>
+          </ul>
         </div>
       </div>
       
