@@ -28,13 +28,15 @@ urlpatterns = [
     path('', include(pages_urls)),
     path('', include(profiles_urls)),
     path('', include(general_urls)),
+    url(r'^i18n/', include('django.conf.urls.i18n')), 
     
 ]
 
 
 urlpatterns += i18n_patterns(
  # Django Admin
-#  url(r'^admin/', admin.site.urls),
+ url(r'^admin/', admin.site.urls),
  url(r'^', include(pages_urls)),
  url(r'^', include(profiles_urls)),
+ prefix_default_language=False
 )

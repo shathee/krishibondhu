@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'profiles',
     'pages',
     'general',
+    'questions',
+    'crops',
     'bootstrapform',
     
 ]

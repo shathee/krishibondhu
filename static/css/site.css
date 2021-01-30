@@ -2,6 +2,8 @@
 font-family: 'Yusei Magic', sans-serif;*/
 body{
 	background-color: #BCD3E7;
+	font-family: 'Yusei Magic', Hind Siliguri, sans-serif;
+	
 }
 header{
 	background-color: #BCD3E7;
@@ -12,14 +14,14 @@ header{
 	
 }
 .site-logo-text{
-	font-family: 'Potta One', cursive;
+	font-family: 'Potta One', 'Hind Siliguri', cursive;
 	color: #ffccff !important;
 }
 .site-logo-text:hover{
 	color: #fff166 !important;
 }
 .site-header-nav{
-	font-family: 'Yusei Magic', sans-serif;
+	font-family: 'Yusei Magic', Hind Siliguri, sans-serif;
 	font-size: 1.1rem;
 	background-color: #001845;
 	background-image: linear-gradient(#001233, #001845);
@@ -80,7 +82,11 @@ ul.dropdown-menu > li:hover {
 	color: #d8f3dc;
 }
 
-
+.language-nav li a {
+	text-decoration: none;
+	color: #dedede;
+	font-size: 0.8rem;
+}
 
 
 .messages .success {
