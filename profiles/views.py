@@ -20,6 +20,13 @@ def dashboard(request):
     else:
         return HttpResponseRedirect(reverse_lazy('pages:login'))
 
+@login_required
+def questions(request):
+    return render(request, 'profiles/questions.html')
+
+@login_required
+def ask_questions(request):
+    return render(request, 'profiles/ask_questions.html')
 
 @login_required
 @transaction.atomic
